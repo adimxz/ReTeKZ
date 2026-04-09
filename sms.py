@@ -25,7 +25,7 @@ class SendSms():
             self.mail = ''.join(choice(ascii_lowercase) for i in range(22))+"@gmail.com"
 
 
-    #kahvedunyasi.com
+    #adimxz.com
     def KahveDunyasi(self):    
         try:    
             url = "https://api.kahvedunyasi.com:443/api/v1/auth/account/register/phone-number"
