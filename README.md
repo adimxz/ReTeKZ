@@ -1,5 +1,3 @@
-# ReTeKZ-SMS-BOMBER
-
 # ReTeKZ - SMS Bomber Tool
 
 ⚠️ **Bu tool sadece eğitim amaçlıdır! İzinsiz kullanım yasaktır.**
