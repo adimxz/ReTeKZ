@@ -2,6 +2,11 @@
 # ReTeKZ Discord SMS Bot
 # GitHub: github.com/adimxz/ReTeKZ
 
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
 import discord
 from discord.ext import commands
 from time import sleep
@@ -13,7 +18,7 @@ import json
 import os
 
 # ============= KONFIGURASYON =============
-TOKEN = ""  # tokeni siz yapacaksiniz 
+TOKEN = os.getenv("TOKEN")
 PREFIX = "!"
 YETKILI_ROLLER = ["Admin", "Moderator", "Owner"]
 COOLDOWN_SURESI = 30  # Saniye cinsinden bekleme
