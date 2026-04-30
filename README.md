@@ -8,4 +8,4 @@
 git clone https://github.com/adimxz/ReTeKZ.git
 cd ReTeKZ
 pip install -r requirements.txt
-python ReTeKZ.py
+python3 ReTeKZ.py
