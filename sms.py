@@ -726,7 +726,7 @@ class SendSms():
             headers = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0", "Content-Type": "application/json"}
             json = {"phone": self.phone}
             r = requests.post(url, headers=headers, json=json, timeout=6)
-            if r.status_code == 200::
+            if r.status_code == 200:
                 print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> a101.com.tr")
                 self.adet += 1
             else:
